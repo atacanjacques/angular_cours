@@ -2,13 +2,14 @@
 
 <p>
   <mat-tab-group>
-    <mat-tab label="One">
-      <h1>Some tab content</h1>
-      <p>...</p>
+    <mat-tab label="{{ tabOne }}">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" value="{{ user.email }}" [(ngModel)] = user.email>
+        </mat-form-field>
+        <pre>{{ user | json }}</pre>
     </mat-tab>
-    <mat-tab label="Two">
-      <h1>Some more tab content</h1>
-      <p>...</p>
-    </mat-tab>
+    <mat-tab label="{{ tabTwo }}">
+        
+      </mat-tab>
   </mat-tab-group>
  </p>
