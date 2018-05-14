@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { SpacexApiService } from '../providers/spacex-api.service'
+import { SpacexApiService } from '../providers/spacex-api.service';
+import { Launch } from '../../../Models/Launch';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-page1',
@@ -22,13 +25,18 @@ export class Page1Component implements OnInit {
     launches: Launch[];
   
   constructor(
-    private spaceService : SpacexApiService
+    private spaceService : SpacexApiService,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.spaceService.fetchUpComingLaunches().subscribe(
       (data: Launch[]) => this.launches = data
     );
+  }
+
+  navigateToPage2() {
+    this.router.navigate(['page2'])  
   }
 
 }

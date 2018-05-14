@@ -3,6 +3,7 @@
 <p>
   <mat-tab-group>
     <mat-tab label="{{ tabTwo }}">
+      <button mat-raised-button (click)="navigateToPage2()">GO to page 2</button>
         <ul>
             <mat-list *ngFor="let launch of launches; let i = index">
                 <mat-list-item>
