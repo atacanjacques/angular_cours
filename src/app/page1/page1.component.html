@@ -2,14 +2,22 @@
 
 <p>
   <mat-tab-group>
+    <mat-tab label="{{ tabTwo }}">
+        <ul>
+            <mat-list *ngFor="let launch of launches; let i = index">
+                <mat-list-item>
+                <h1 matLine>{{ i }} : {{launch.rocket.rocket_name}}</h1>
+                <p matLine>Flight :{{launch.flight_number}}</p>
+                <p matLine>Reuse :{{launch.reuse.core}}</p>
+            </mat-list-item>
+          </mat-list>
+        </ul>
+    </mat-tab>
     <mat-tab label="{{ tabOne }}">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Email" value="{{ user.email }}" [(ngModel)] = user.email>
         </mat-form-field>
         <pre>{{ user | json }}</pre>
     </mat-tab>
-    <mat-tab label="{{ tabTwo }}">
-        
-      </mat-tab>
   </mat-tab-group>
  </p>
