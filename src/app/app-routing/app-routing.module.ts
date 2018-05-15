@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     path: 'page2',
     component: Page2Component
   }
-]
+];
 
 @NgModule({
   imports: [

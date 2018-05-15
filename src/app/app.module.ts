@@ -31,6 +31,6 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [Page1Component]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
